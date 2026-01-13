@@ -1,4 +1,4 @@
-import 'package:counter_app/cubit/counter_cubit.dart';
+import 'package:counter_app/bloc/counter_bloc.dart';
 import 'package:counter_app/cubit/inc_dec_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +20,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: .center,
           children: <Widget>[
             Text('You have pushed the button this many times:'),
-            BlocBuilder<CounterCubit, int>(
+            BlocBuilder<CounterBloc, int>(
               builder: (context, counter) {
                 return Text(
                   '$counter',
